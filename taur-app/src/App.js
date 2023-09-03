@@ -16,13 +16,11 @@ function App() {
             setmode1('dark')
             document.body.style.backgroundColor='grey'
         }
-
-
     }
   return (
     <>
     <Navbar mode1={mode1} toggle1={toggle}/>
-    <Textform heading="Place Your Text Here:-"/>
+    <Textform heading="Place Your Text Here:-" mode1={mode1}/>
 
     </>
   );

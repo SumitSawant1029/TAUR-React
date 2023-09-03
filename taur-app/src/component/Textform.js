@@ -24,7 +24,7 @@ export default function Textform(props){
         <>
             
             <div className='container'>
-                <textarea style={{ width: '90%' }} value={Text} onChange={handler} id="exampleFormControlTextare a1" rows="18" ></textarea><br></br><br></br>
+                <textarea style={{backgroundColor:props.mode1==='dark'?'grey':'white',width: '90%'}} value={Text} onChange={handler} id="exampleFormControlTextare a1" rows="18" ></textarea><br></br><br></br>
                 <button className="btn btn-primary mx-2" onClick={UppercaseConverter} >Convert To Upper Case</button>
                 <button className="btn btn-primary mx-2" onClick={LowerCaseConvertor} >Convert To Lower Case</button>
                 <button className="btn btn-primary mx-2" onClick={TextClear} >Clear</button>

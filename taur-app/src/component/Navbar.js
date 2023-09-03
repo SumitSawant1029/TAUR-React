@@ -1,6 +1,4 @@
-import React , {useState} from 'react'
-
-
+import React from 'react'
 
 export default function Navbar(props){
     
@@ -23,7 +21,7 @@ export default function Navbar(props){
                 </ul>
                 <div class="form-check form-switch mx-3">
                     <input className="form-check-input" onChange={props.toggle1} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-                    <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Dark mode</label>
+                    <label className="form-check-label" style={{ color: props.mode1 === 'dark' ? 'white' : 'black'}} htmlFor="flexSwitchCheckDefault">Dark mode</label>
                 </div>
                 <form className="d-flex" role="search">
                     <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
