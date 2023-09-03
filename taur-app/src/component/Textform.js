@@ -7,19 +7,28 @@ export default function Textform(props){
         setText(event.target.value);
     }
     
-    const handler1L =()=>{
+    const TextClear =()=>{
+        setText('');
+    }
+    const UppercaseConverter =()=>{
         setText(Text.toUpperCase());
     }
-    const handler1U =()=>{
+    const LowerCaseConvertor =()=>{
         setText(Text.toLowerCase());
     }
+    const copyTextToClipboard = () => {
+        // Use the Clipboard API to copy text to the clipboard
+        navigator.clipboard.writeText(Text);
+      };
     return(
         <>
             
             <div className='container'>
                 <textarea style={{ width: '90%' }} value={Text} onChange={handler} id="exampleFormControlTextare a1" rows="18" ></textarea><br></br><br></br>
-                <button className="btn btn-primary mx-2" onClick={handler1L} >Convert To Upper Case</button>
-                <button className="btn btn-primary mx-2" onClick={handler1U} >Convert To Lower Case</button>
+                <button className="btn btn-primary mx-2" onClick={UppercaseConverter} >Convert To Upper Case</button>
+                <button className="btn btn-primary mx-2" onClick={LowerCaseConvertor} >Convert To Lower Case</button>
+                <button className="btn btn-primary mx-2" onClick={TextClear} >Clear</button>
+                <button className="btn btn-primary mx-2" onClick={copyTextToClipboard} >Copy Text</button>
             
                 <div>
                     {Text.length} Characters , {Text.split(" ").length} Words<br/>
